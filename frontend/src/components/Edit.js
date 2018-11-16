@@ -28,9 +28,9 @@ class Edit extends Component {
   onSubmit = (e) => {
     e.preventDefault();
 
-    const { name, address, city, postalCode, phone } = this.state.contact;
+    const { name, address, city, postalCode, phone, email } = this.state.contact;
 
-    axios.put('/contacts/'+this.props.match.params.id, { name, address, city, postalCode, phone })
+    axios.put('/contacts/'+this.props.match.params.id, { name, address, city, postalCode, phone, email })
       .then((result) => {
         this.props.history.push("/show/"+this.props.match.params.id)
       });
@@ -46,7 +46,7 @@ class Edit extends Component {
             </h3>
           </div>
           <div class="panel-body">
-            <h4><Link to={`/show/${this.state.contact.id}`}><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> Contact List</Link></h4>
+            <h4><Link to={`/`}><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> Back</Link></h4>
             <form onSubmit={this.onSubmit}>
               <div class="form-group">
                 <label for="name">Name:</label>

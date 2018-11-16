@@ -59,4 +59,11 @@ public class ContactController {
 
         return "";
     }
+
+    @RequestMapping(method=RequestMethod.DELETE, value="/error")
+    public String error() {
+
+
+        return "";
+    }
 }

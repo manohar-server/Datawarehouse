@@ -26,3 +26,12 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+
+.card-deck .card{
+  margin-bottom: 20px;
+}
+
+.value-td{
+  word-break: break-all;
+}
