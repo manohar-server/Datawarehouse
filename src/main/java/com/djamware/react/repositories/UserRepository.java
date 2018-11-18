@@ -1,8 +1,8 @@
-package com.djamware.react.repository;
+package com.djamware.react.repositories;
 
 import com.djamware.react.models.User;
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.CrudRepository;
 
-public interface UserRepository extends JpaRepository<User, String> {
+public interface UserRepository extends CrudRepository<User, String> {
     User findByUsername(String username);
 }

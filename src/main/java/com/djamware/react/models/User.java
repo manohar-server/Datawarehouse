@@ -6,13 +6,12 @@ import java.util.Set;
 
 @Document(collection = "user")
 public class User {
+
     @Id
     private String id;
     private String username;
     private String password;
-    private String passwordConfirm;
     private Set<Role> roles;
-
 
     public String getId() {
         return id;
@@ -36,15 +35,6 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-
-    public String getPasswordConfirm() {
-        return passwordConfirm;
-    }
-
-    public void setPasswordConfirm(String passwordConfirm) {
-        this.passwordConfirm = passwordConfirm;
     }
 
     public Set<Role> getRoles() {

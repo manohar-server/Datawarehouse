@@ -6,11 +6,12 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.Set;
 
-@Document(collection = "role")
+
 public class Role {
+
     private String id;
     private String name;
-    private Set<User> users;
+    
 
 
     public String getId() {
@@ -29,12 +30,5 @@ public class Role {
         this.name = name;
     }
 
-    @ManyToMany(mappedBy = "roles")
-    public Set<User> getUsers() {
-        return users;
-    }
 
-    public void setUsers(Set<User> users) {
-        this.users = users;
-    }
 }

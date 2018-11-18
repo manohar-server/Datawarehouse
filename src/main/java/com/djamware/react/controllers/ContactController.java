@@ -56,14 +56,7 @@ public class ContactController {
         Optional<Contact> optcontact = contactRepository.findById(id);
         Contact contact = optcontact.get();
         contactRepository.delete(contact);
-
         return "";
     }
 
-    @RequestMapping(method=RequestMethod.DELETE, value="/error")
-    public String error() {
-
-
-        return "";
-    }
 }
